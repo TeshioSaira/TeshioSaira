@@ -16,55 +16,33 @@ p{
     padding: 0;
 }
 
-.fixed{
-    position: fixed;
-    top: 0;
+.account_icon_img{
+    border-radius: 50%;
+    height: 15vw;
+    mask-image: radial-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 70%);
+    -webkit-mask-image: radial-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 70%);
+    position: absolute;
+    width: 15vw;
 }
 
-#frame{
-    background-color: blue;
+.account_icon_img_img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#infrontInformation{
     height: 100vh;
     left: 0;
-    position: relative;
-    top: 100vh;
+    top: 0;
+    position: absolute;
     width: 100vw;
 }
 
-#header{
-    align-items: flex-end;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 6rem;
-    justify-content: flex-start;
-    width: 90vw;
-}
-
-.header_box{
-    background-color: rgb(216, 216, 216);
-    clip-path: polygon(2rem 0, calc(100% - 2rem) 0, 100% 2rem, 100% 100%, 0 100%, 0% 2rem);
-    height: 5rem;
-    width: fit-content;
-}
-
-.header_box:hover{
-    background-color: rgb(241, 241, 241);
-    clip-path: polygon(2rem 0, calc(100% - 2rem) 0, 100% 2rem, 100% 100%, 0 100%, 0% 2rem);
-    cursor: pointer;
-    height: 5rem;
-    transform: translateY(-0.3rem);
-    width: fit-content;
-}
-
-.header_box.selected{
-    background-color: rgb(255, 255, 255);
-    clip-path: polygon(2rem 0, calc(100% - 2rem) 0, 100% 2rem, 100% 100%, 0 100%, 0% 2rem);
-    font-weight: bold;
-    height: 5rem;
-    width: fit-content;
-}
-
-.header_box_p{
-    padding-left: 3rem;
-    padding-right: 3rem;
+.infrontInformationItem{
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100vw;
 }
