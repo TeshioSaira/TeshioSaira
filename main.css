@@ -20,8 +20,8 @@ p{
 .account_icon_img{
     border-radius: 50%;
     height: 15vw;
-    mask-image: radial-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 70%);
-    -webkit-mask-image: radial-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 70%);
+    mask-image: radial-gradient(rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 70%);
+    -webkit-mask-image: radial-gradient(rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 70%);
     position: absolute;
     width: 15vw;
 }

@@ -46,8 +46,12 @@ setInterval(() => {
             var radian = Math.PI * ((0.5 + (i + 1) / (account_count + 1)) * account_time / 2000 + 0.5);
             var top = (displayHeight / 2 - Math.sin(radian) * displayWidth / 9 - displayWidth * 0.075) / displayHeight * 100;
             var left = (1 + Math.cos(radian)) * 50 - 7.5;
+            var opacity = 1;
+            if(radian < Math.PI){
+                opacity = 0.5;
+            }
             document.getElementsByClassName('account_icon_img')[i].removeAttribute('style');
-            document.getElementsByClassName('account_icon_img')[i].setAttribute('style', 'top: ' + top + '%; left: ' + left + '%;');
+            document.getElementsByClassName('account_icon_img')[i].setAttribute('style', 'top: ' + top + '%; left: ' + left + '%; opacity: ' + opacity + ';');
         }
         if(account_time >= 2000){
             account_move = false;
