@@ -26,15 +26,21 @@ function modeSelect(mode){
 }
 
 function openMarshmallow(){
-    window.open("https://marshmallow-qa.com/k041ew722thw37j?t=C9ae0S&utm_medium=url_text&utm_source=promotion", "_blank");
+    if(!account_move){
+        window.open("https://marshmallow-qa.com/k041ew722thw37j?t=C9ae0S&utm_medium=url_text&utm_source=promotion", "_blank");
+    }
 }
 
 function openTwitch(){
-    window.open("https://www.twitch.tv/teshiosaira", "_blank");
+    if(!account_move){
+        window.open("https://www.twitch.tv/teshiosaira", "_blank");
+    }
 }
 
 function openYouTube(){
-    window.open("https://www.youtube.com/@TeshioSaira", "_blank");
+    if(!account_move){
+        window.open("https://www.youtube.com/@TeshioSaira", "_blank");
+    }
 }
 
 setInterval(() => {
@@ -47,11 +53,12 @@ setInterval(() => {
             var top = (displayHeight / 2 - Math.sin(radian) * displayWidth / 9 - displayWidth * 0.075) / displayHeight * 100;
             var left = (1 + Math.cos(radian)) * 50 - 7.5;
             var opacity = 1;
+            var scale = (3 - Math.sin(radian)) / 4;
             if(radian < Math.PI){
                 opacity = 0.5;
             }
             document.getElementsByClassName('account_icon_img')[i].removeAttribute('style');
-            document.getElementsByClassName('account_icon_img')[i].setAttribute('style', 'top: ' + top + '%; left: ' + left + '%; opacity: ' + opacity + ';');
+            document.getElementsByClassName('account_icon_img')[i].setAttribute('style', 'top: ' + top + '%; left: ' + left + '%; opacity: ' + opacity + '; transform: scale(' + scale + ');');
         }
         if(account_time >= 2000){
             account_move = false;
