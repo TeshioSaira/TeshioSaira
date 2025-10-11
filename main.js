@@ -25,6 +25,18 @@ function modeSelect(mode){
     }
 }
 
+function openMarshmallow(){
+    window.open("https://marshmallow-qa.com/k041ew722thw37j?t=C9ae0S&utm_medium=url_text&utm_source=promotion", "_blank");
+}
+
+function openTwitch(){
+    window.open("https://www.twitch.tv/teshiosaira", "_blank");
+}
+
+function openYouTube(){
+    window.open("https://www.youtube.com/@TeshioSaira", "_blank");
+}
+
 setInterval(() => {
     var displayWidth = window.innerWidth;
     var displayHeight = window.innerHeight;

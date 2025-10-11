@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 html{
+    background-color: black;
     color: rgb(0, 19, 36);
     font-size: 62.5%;
     font-family: "Ubuntu", sans-serif;
@@ -23,6 +24,11 @@ p{
     -webkit-mask-image: radial-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 70%);
     position: absolute;
     width: 15vw;
+}
+
+.account_icon_img:hover{
+    mask-image: radial-gradient(rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask-image: radial-gradient(rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0) 100%);
 }
 
 .account_icon_img_img{
