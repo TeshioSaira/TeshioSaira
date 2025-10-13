@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 html{
-    color: rgb(0, 19, 36);
+    color: rgb(0, 48, 90);
     font-size: 62.5%;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
@@ -84,8 +84,8 @@ p{
 }
 
 .infrontInformation_detail_background{
-    background-color: rgba(255, 203, 125, 0.411);
-    border: thick double rgb(255, 203, 125);
+    background-color: rgba(255, 232, 197, 0.623);
+    border: thick double rgb(255, 232, 197);
     height: 75vh;
     left: 10vw;
     overflow-y: auto;
