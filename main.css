@@ -37,6 +37,7 @@ p{
 }
 
 .account_icon_img:hover{
+    cursor: pointer;
     mask-image: radial-gradient(rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0) 100%);
     -webkit-mask-image: radial-gradient(rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0) 100%);
 }
@@ -63,9 +64,6 @@ p{
     width: 100vw;
 }
 
-#informationChanger{
-}
-
 .informationChangerItem{
     background-color: rgb(18, 28, 87);
     color: white;
@@ -76,6 +74,7 @@ p{
 }
 
 .informationChangerItem:hover{
+    cursor: pointer;
     mask-image: radial-gradient(rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0) 100%);
     -webkit-mask-image: radial-gradient(rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0) 100%);
 }
@@ -84,7 +83,15 @@ p{
     text-align: center;
 }
 
-#infrontInformation{
+.infrontInformation_detail_background{
+    background-color: rgba(255, 203, 125, 0.411);
+    border: thick double rgb(255, 203, 125);
+    height: 75vh;
+    left: 10vw;
+    overflow-y: auto;
+    position: relative;
+    top: 22vh;
+    width: 80vw;
 }
 
 .infrontInformationItem_detail{
@@ -96,11 +103,21 @@ p{
     width: 100vw;
 }
 
-@keyframes informationChangerItem_appear{
+@keyframes informationChangerItem_l_appear{
     from{
     }
     to{
         left: 35%;
+        top: 5%;
+        width: 30%;
+    }
+}
+
+@keyframes informationChangerItem_r_appear{
+    from{
+    }
+    to{
+        right: 35%;
         top: 5%;
         width: 30%;
     }
@@ -151,13 +168,15 @@ p{
     }
 }
 
-.profile_background{
-    background-color: rgba(255, 203, 125, 0.411);
-    border: thick double rgb(255, 203, 125);
-    height: 75vh;
-    left: 10vw;
-    overflow-y: auto;
+#loading{
+    height: 100vh;
+    left: 0;
     position: absolute;
-    top: 22vh;
-    width: 80vw;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+
+#loading:hover{
+    cursor: not-allowed;
 }

@@ -32,22 +32,37 @@
         <div id="infrontInformation">
             <div class="infrontInformationItem" id="account" style="display: none;">
                 <div class="account_icon_img">
-                    <img class="account_icon_img_img" src="images/SNS/YouTube.jpg" alt="SNS" onclick="openYouTube();">
+                    <img class="account_icon_img_img" src="images/SNS/YouTube.jpg" alt="SNS" onclick="loadStart(); openYouTube();">
                 </div>
                 <div class="account_icon_img">
-                    <img class="account_icon_img_img" src="images/SNS/Twitch.png" alt="SNS" onclick="openTwitch();">
+                    <img class="account_icon_img_img" src="images/SNS/Twitch.png" alt="SNS" onclick="loadStart(); openTwitch();">
                 </div>
                 <div class="account_icon_img">
-                    <img class="account_icon_img_img" src="images/SNS/マシュマロ.png" alt="SNS" onclick="openMarshmallow();">
+                    <img class="account_icon_img_img" src="images/SNS/マシュマロ.png" alt="SNS" onclick="loadStart(); openMarshmallow();">
                 </div>
             </div>
             <div class="infrontInformationItem infrontInformationItem_detail" id="profile" style="display: none;" onclick="returnHome();">
-                <div class="profile_background">
+                <div class="infrontInformation_detail_background">
+
+                </div>
+            </div>
+            <div class="infrontInformationItem infrontInformationItem_detail" id="news" style="display: none;" onclick="returnHome();">
+                <div class="infrontInformation_detail_background">
+
+                </div>
+            </div>
+            <div class="infrontInformationItem infrontInformationItem_detail" id="contact" style="display: none;" onclick="returnHome();">
+                <div class="infrontInformation_detail_background">
+
+                </div>
+            </div>
+            <div class="infrontInformationItem infrontInformationItem_detail" id="guideline" style="display: none;" onclick="returnHome();">
+                <div class="infrontInformation_detail_background">
 
                 </div>
             </div>
         </div>
-        <div id="footer">
+        <div id="loading" style="display: none;">
         </div>
     </body>
 </html>

@@ -6,6 +6,7 @@ var account_startTime = 0;
 var informationChanger_startTime = 0;
 var account_count = 0;
 var informationChanger_count = 0;
+var loadStart_time = 0;
 
 window.onload = firstScript;
 
@@ -15,10 +16,13 @@ function firstScript(){
     modeSelect(0);
 }
 
+function loadStart(){
+    loadStart_time = new Date().getTime();
+}
+
 function modeSelect(mode){
-    console.log(mode);
+    loadStart();
     var displayWidth = window.outerWidth;
-    console.log(displayWidth);
     var infrontInformationItem = document.getElementsByClassName('infrontInformationItem');
     for(var i = 0; i < infrontInformationItem.length; i++){
         if(infrontInformationItem[i].getAttribute('style').split('animation').length > 1){
@@ -41,7 +45,11 @@ function modeSelect(mode){
             var width = informationChangerItem[i].clientWidth / displayWidth * 100;
             var attribute = informationChangerItem[i].getAttribute('style');
             informationChangerItem[i].removeAttribute('style');
-            informationChangerItem[i].setAttribute('style', attribute + ' width: ' + width + '%; animation: 1s ease-out forwards informationChangerItem_appear;');
+            if(i < informationChangerItem.length / 2){
+                informationChangerItem[i].setAttribute('style', attribute + ' width: ' + width + '%; animation: 1s ease-out forwards informationChangerItem_l_appear;');
+            }else{
+                informationChangerItem[i].setAttribute('style', attribute + ' width: ' + width + '%; animation: 1s ease-out forwards informationChangerItem_r_appear;');
+            }
             informationChangerItem[i].children[0].removeAttribute('style');
             informationChangerItem[i].children[0].setAttribute('style', 'animation: 1s ease-out forwards informationChangerItem_p_appear;');
         }else{
@@ -80,6 +88,7 @@ function openYouTube(){
 
 function returnHome(){
     if(!informationChanger_disappear){
+        loadStart();
         informationChanger_disappear_fitst = true;
         informationChanger_disappear = true;
         informationChanger_startTime = new Date().getTime();
@@ -96,9 +105,12 @@ setInterval(() => {
             var top = (displayHeight / 2 - Math.sin(radian) * displayWidth / 20 - displayWidth * 0.075) / displayHeight * 100;
             var left = (1 + Math.cos(radian)) * 50 - 7.5;
             var opacity = 1;
-            var scale = (0 - Math.sin(radian)) * 2;
+            var scale = Math.pow(Math.sin(radian), 2) * 1.2;
+            if(Math.sin(radian) > 0){
+                scale = Math.pow(1 - Math.sin(radian), 2) / 4;
+            }
             if(radian % (Math.PI * 2) < Math.PI){
-                opacity = 0.5;
+                opacity = 1 - Math.sin(radian);
             }
             document.getElementsByClassName('account_icon_img')[i].removeAttribute('style');
             document.getElementsByClassName('account_icon_img')[i].setAttribute('style', 'top: ' + top + '%; left: ' + left + '%; opacity: ' + opacity + '; transform: scale(' + scale + ');');
@@ -169,6 +181,14 @@ setInterval(() => {
         if(informationChanger_disappear_time >= 1000){
             informationChanger_disappear = false;
             modeSelect(0);
+        }
+    }
+    if(loadStart_time + 1000 > new Date().getTime()){
+        document.getElementById('loading').removeAttribute('style');
+    }else{
+        if(document.getElementById('loading').getAttribute('style') != 'display: none;'){
+            document.getElementById('loading').removeAttribute('style');
+            document.getElementById('loading').setAttribute('style', 'display: none;');
         }
     }
 }, 10);
