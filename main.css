@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 html{
-    background-color: black;
     color: rgb(0, 19, 36);
     font-size: 62.5%;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+body{
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
 }
 
 p{
@@ -37,18 +47,117 @@ p{
     width: 100%;
 }
 
-#infrontInformation{
+#background{
     height: 100vh;
     left: 0;
+    position: absolute;
     top: 0;
+    width: 100vw;
+}
+
+#background img{
+    bottom: 0;
+    min-height: 100vh;
+    object-fit: cover;
     position: absolute;
     width: 100vw;
 }
 
-.infrontInformationItem{
+#informationChanger{
+}
+
+.informationChangerItem{
+    background-color: rgb(18, 28, 87);
+    color: white;
+    padding: 0 3vw;
+    mask-image: radial-gradient(rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 70%);
+    -webkit-mask-image: radial-gradient(rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 70%);
+    position: absolute;
+}
+
+.informationChangerItem:hover{
+    mask-image: radial-gradient(rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask-image: radial-gradient(rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0) 100%);
+}
+
+.informationChangerItem p{
+    text-align: center;
+}
+
+#infrontInformation{
+}
+
+.infrontInformationItem_detail{
+    background-color: rgba(0, 0, 0, 0.068);
     height: 100vh;
     left: 0;
-    top: 0;
     position: absolute;
+    top: 0;
     width: 100vw;
+}
+
+@keyframes informationChangerItem_appear{
+    from{
+    }
+    to{
+        left: 35%;
+        top: 5%;
+        width: 30%;
+    }
+}
+
+@keyframes informationChangerItem_p_appear{
+    from{
+    }
+    to{
+        font-size: 5rem;
+    }
+}
+
+@keyframes informationChangerItem_disappear{
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-5vh);
+    }
+}
+
+@keyframes infrontInformationItem_appear{
+    from{
+        opacity: 0;
+        width: 0;
+    }
+    99%{
+        opacity: 1;
+        width: 0;
+    }
+    to{
+        width: 100vw;
+    }
+}
+
+@keyframes infrontInformationItem_disappear{
+    from{
+        opacity: 1;
+    }
+    99%{
+        opacity: 0;
+    }
+    to{
+        display: none;
+    }
+}
+
+.profile_background{
+    background-color: rgba(255, 203, 125, 0.411);
+    border: thick double rgb(255, 203, 125);
+    height: 75vh;
+    left: 10vw;
+    overflow-y: auto;
+    position: absolute;
+    top: 22vh;
+    width: 80vw;
 }

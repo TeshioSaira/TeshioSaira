@@ -10,9 +10,24 @@
         <script src='main.js'></script>
     </head>
     <body>
-        <div id="header">
+        <div id="background">
+            <img src="images/Background/autumn_23088369.jpg" alt="background">
         </div>
         <div id="standingPicture">
+        </div>
+        <div id="informationChanger">
+            <div class="informationChangerItem" onclick="modeSelect(1);">
+                <p>Profile</p>
+            </div>
+            <div class="informationChangerItem" onclick="modeSelect(2);">
+                <p>News</p>
+            </div>
+            <div class="informationChangerItem" onclick="modeSelect(3);">
+                <p>Contact</p>
+            </div>
+            <div class="informationChangerItem" onclick="modeSelect(4);">
+                <p>Guideline</p>
+            </div>
         </div>
         <div id="infrontInformation">
             <div class="infrontInformationItem" id="account" style="display: none;">
@@ -26,9 +41,13 @@
                     <img class="account_icon_img_img" src="images/SNS/マシュマロ.png" alt="SNS" onclick="openMarshmallow();">
                 </div>
             </div>
+            <div class="infrontInformationItem infrontInformationItem_detail" id="profile" style="display: none;" onclick="returnHome();">
+                <div class="profile_background">
+
+                </div>
+            </div>
         </div>
         <div id="footer">
-
         </div>
     </body>
 </html>
