@@ -9,6 +9,7 @@ html{
 }
 
 body{
+    animation: 1s ease-out forwards bodyBlur;
     bottom: 0;
     left: 0;
     margin: 0;
@@ -101,6 +102,17 @@ p{
     position: absolute;
     top: 0;
     width: 100vw;
+}
+
+@keyframes bodyBlur{
+    from{
+        filter: blur(100px);
+        -ms-filter: blur(100px);
+    }
+    to{
+        filter: blur(0px);
+        -ms-filter: blur(0px);
+    }
 }
 
 @keyframes informationChangerItem_l_appear{
