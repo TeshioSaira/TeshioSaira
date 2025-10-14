@@ -116,17 +116,18 @@ setInterval(() => {
             document.getElementsByClassName('account_icon_img')[i].setAttribute('style', 'top: ' + top + '%; left: ' + left + '%; opacity: ' + opacity + '; transform: scale(' + scale + ');');
         }
         for(var i = 0; i < informationChanger_count; i++){
+            var width = document.getElementsByClassName('informationChangerItem')[i].clientWidth / displayWidth * 100;
             if(i < informationChanger_count / 2){
                 var radian = Math.PI * (1 - (1 + i) / (1 + informationChanger_count) * Math.sqrt(1 - Math.pow(1 - account_time / 1000, 2)));
                 var top = ((displayHeight / 2 - displayWidth * 0.125) * (1 - Math.sin(radian))) / displayHeight * 100;
-                var left = (1 + Math.cos(radian)) * 45;
+                var left = (1 + Math.cos(radian)) * 45 - width / 2 + 2;
                 var opacity = radian / (Math.PI * 0.1);
                 document.getElementsByClassName('informationChangerItem')[i].removeAttribute('style');
                 document.getElementsByClassName('informationChangerItem')[i].setAttribute('style', 'top: ' + top + '%; left: ' + left + '%; opacity: ' + opacity + ';');
             }else{
                 var radian = Math.PI * (1 - (informationChanger_count - i) / (1 + informationChanger_count) * Math.sqrt(1 - Math.pow(1 - account_time / 1000, 2)));
                 var top = ((displayHeight / 2 - displayWidth * 0.125) * (1 - Math.sin(radian))) / displayHeight * 100;
-                var right = (1 + Math.cos(radian)) * 45;
+                var right = (1 + Math.cos(radian)) * 45 - width / 2 + 2;
                 var opacity = radian / (Math.PI * 0.1);
                 document.getElementsByClassName('informationChangerItem')[i].removeAttribute('style');
                 document.getElementsByClassName('informationChangerItem')[i].setAttribute('style', 'top: ' + top + '%; right: ' + right + '%; opacity: ' + opacity + ';');

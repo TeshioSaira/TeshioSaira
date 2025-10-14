@@ -9,24 +9,28 @@
         <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
         <script src='main.js'></script>
     </head>
-    <body>
+    <body id="body">
         <div id="background">
             <img src="images/Background/autumn_23088369.jpg" alt="background">
         </div>
         <div id="standingPicture">
+            <img src="images/Teshio Saira/立ち絵.png" alt="立ち絵">
         </div>
         <div id="informationChanger">
             <div class="informationChangerItem" onclick="modeSelect(1);">
-                <p>Profile</p>
+                <h3>自己紹介</h3>
             </div>
             <div class="informationChangerItem" onclick="modeSelect(2);">
-                <p>News</p>
+                <h3>最新情報</h3>
             </div>
             <div class="informationChangerItem" onclick="modeSelect(3);">
-                <p>Contact</p>
+                <h3>ゲーム</h3>
             </div>
             <div class="informationChangerItem" onclick="modeSelect(4);">
-                <p>Guideline</p>
+                <h3>連絡</h3>
+            </div>
+            <div class="informationChangerItem" onclick="modeSelect(5);">
+                <h3>ガイドライン</h3>
             </div>
         </div>
         <div id="infrontInformation">
@@ -52,6 +56,47 @@
             <div class="infrontInformationItem infrontInformationItem_detail" id="news" style="display: none;" onclick="returnHome();">
                 <div class="infrontInformation_detail_background">
 
+                </div>
+            </div>
+            <div class="infrontInformationItem infrontInformationItem_detail" id="games" style="display: none;" onclick="returnHome();">
+                <div class="infrontInformation_detail_background">
+                    <div>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <div>
+                            <img src="images/Game Title/among us.jpg">
+                            <p>AMONG US</p>
+                        </div>
+                        <div>
+                            <img src="images/Game Title/たまごっちのプチプチおみせっち.avif">
+                            <p>たまごっちのプチプチおみせっち</p>
+                        </div>
+                        <div>
+                            <img src="images/Game Title/東方紅魔郷.jpg">
+                            <p>東方紅魔郷</p>
+                        </div>
+                        <div>
+                            <img src="images/Game Title/東方妖々夢.jpg">
+                            <p>東方妖々夢</p>
+                        </div>
+                        <div>
+                            <img src="images/Game Title/東方萃夢想.jpg">
+                            <p>東方萃夢想</p>
+                        </div>
+                        <div>
+                            <img src="images/Game Title/東方永夜抄.jpg">
+                            <p>東方永夜抄</p>
+                        </div>
+                        <div>
+                            <img src="images/Game Title/東方風神録.jpg">
+                            <p>東方風神録</p>
+                        </div>
+                        <div>
+                            <img src="images/Game Title/東方紺珠伝.jpg">
+                            <p>東方紺珠伝</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="infrontInformationItem infrontInformationItem_detail" id="contact" style="display: none;" onclick="returnHome();">
