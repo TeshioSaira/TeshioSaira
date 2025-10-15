@@ -1,3 +1,5 @@
+
+
 var account_move = false;
 var account_move_return = false;
 var informationChanger_disappear = false;
@@ -13,6 +15,36 @@ window.onload = firstScript;
 function firstScript(){
     account_count = document.getElementsByClassName('account_icon_img').length;
     informationChanger_count = document.getElementsByClassName('informationChangerItem').length;
+    fetch("./games_list.json").then(response => {
+        if(!response.ok) throw new Error("Can't read json");
+        return response.json();
+    }).then(games_data => {
+        var games_list = document.getElementById('games_list');
+        for(var i = 0; i < games_data.game.length; i++){
+            var games_each = document.createElement('div');
+            games_each.setAttribute('class', 'games_each');
+            var games_img = document.createElement('img');
+            games_img.setAttribute('class', 'games_img');
+            games_img.setAttribute('src', 'images/Game Title/' + games_data.game[i].title + '.' + games_data.game[i].img);
+            games_each.appendChild(games_img);
+            var games_title = document.createElement('p');
+            games_title.setAttribute('class', 'games_title');
+            games_title.textContent = games_data.game[i].title;
+            games_each.appendChild(games_title);
+            var games_tag = document.createElement('div');
+            games_tag.setAttribute('class', 'games_tag');
+            for(var j = 0; j < games_data.game[i].tag.length; j++){
+                var games_tag_content = document.createElement('p');
+                games_tag_content.setAttribute('class', 'games_' + Object.keys(games_data.game[i].tag)[j].replaceAll('+-*', ''));
+                games_tag_content.textContent = games_data.game[i].tag[Object.keys(games_data.game[i].tag)[j]];
+                games_tag.appendChild(games_tag_content);
+            }
+            games_each.appendChild(games_tag);
+            games_list.appendChild(games_each);
+        }
+    }).catch(err => {
+        console.error('error: ', err)
+    });
     modeSelect(0);
 }
 
