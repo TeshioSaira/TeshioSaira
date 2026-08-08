@@ -1,5 +1,5 @@
 :root{
-    --width: max(calc(((30vh / 9 * 16) + 45000vw + ((30vh / 9 * 16 - 50vw) / abs(calc(30vh / 9 * 16 - 50vw)) * 45000vw)) / 1000), calc(30vh / 9 * 16));
+    --width: max(calc(((30vh / 9 * 16) + 45000vw + ((30vh / 9 * 16 - 50vw) / abs(calc(30vh / 9 * 16 - 50vw)) * 45000vw)) / 1000), min(calc(30vh / 9 * 16), 90vw));
     --height: calc(var(--width) / 16 * 9);
     --font-size: calc(var(--width) / 23);
     --border: calc(var(--font-size) / 10);
