@@ -1,5 +1,5 @@
 :root{
-    --width: max(calc(((30vh / 9 * 16) + 45000vw + ((30vh / 9 * 16 - 50vw) / abs(calc(30vh / 9 * 16 - 50vw)) * 45000vw)) / 1000), min(calc(30vh / 9 * 16), 90vw));
+    --width: max(calc(((30vh / 9 * 16) + 40000vw + ((30vh / 9 * 16 - 50vw) / abs(calc(30vh / 9 * 16 - 50vw)) * 40000vw)) / 1000), min(calc(30vh / 9 * 16), 90vw));
     --height: calc(var(--width) / 16 * 9);
     --font-size: calc(min(max(calc(350vh / 9), 23vw), 90vw) / 23);
     --border: calc(var(--font-size) / 10);
@@ -44,7 +44,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 5vw;
-    padding: var(--font-size);
+    padding: 0 5vw;
     width: 90vw;
 }
 
@@ -79,7 +79,7 @@ body{
 }
 
 .link *{
-    width: calc(var(--font-size) * 6);
+    width: calc(var(--font-size) * 4);
 }
 
 #footer{
