@@ -14,6 +14,8 @@ body{
     background-color: black;
     height: calc(var(--font-size) * 2);
     left: 0;
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 0;
     width: 100vw;
@@ -26,6 +28,8 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: calc(var(--font-size) * 2);
     width: 100vw;
@@ -52,6 +56,8 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
     width: var(--width);
 }
 
@@ -73,7 +79,7 @@ body{
 }
 
 .link *{
-    width: 30vh;
+    width: calc(var(--font-size) * 6);
 }
 
 #footer{
