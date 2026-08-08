@@ -50,7 +50,6 @@ body{
 
 #videoContainerRight{
     align-items: center;
-    background-color: red;
     color: white;
     display: flex;
     flex-direction: column;
@@ -78,8 +77,17 @@ body{
     width: 100vw;
 }
 
-.link *{
-    width: calc(var(--font-size) * 4);
+.link div{
+    width: calc(var(--font-size) * 5);
+}
+
+.link img{
+    border-radius: 50%;
+    width: calc(var(--font-size) * 3);
+}
+
+.link p{
+    width: calc(var(--font-size) * 5);
 }
 
 #footer{
