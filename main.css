@@ -1,5 +1,5 @@
 :root{
-    --width: calc(((30vh / 9 * 16) + 45000vw + ((30vh / 9 * 16 - 50vw) / abs(calc(30vh / 9 * 16 - 50vw)) * 45000vw)) / 1000);
+    --width: max(calc(((30vh / 9 * 16) + 45000vw + ((30vh / 9 * 16 - 50vw) / abs(calc(30vh / 9 * 16 - 50vw)) * 45000vw)) / 1000), calc(30vh / 9 * 16));
     --height: calc(var(--width) / 16 * 9);
     --font-size: calc(var(--width) / 23);
     --border: calc(var(--font-size) / 10);
@@ -36,7 +36,7 @@ body{
     color: white;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 5vw;
     padding: var(--font-size);
