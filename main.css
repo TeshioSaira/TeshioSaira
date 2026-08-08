@@ -28,6 +28,7 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
+    left: 0;
     margin: 0;
     padding: 0;
     position: absolute;
@@ -42,7 +43,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: calc(var(--font-size) * 2) 5vw;
     padding: calc(var(--font-size) * 2) 5vw;
     width: 90vw;
@@ -82,7 +83,7 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .link div{
@@ -101,4 +102,5 @@ body{
 
 #footer{
     background-color: black;
+    width: 100vw;
 }
