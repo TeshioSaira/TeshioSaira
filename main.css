@@ -31,7 +31,7 @@ body{
     margin: 0;
     padding: 0;
     position: absolute;
-    top: calc(var(--font-size) * 2);
+    top: calc(var(--font-size) * 3);
     width: 100vw;
 }
 
@@ -43,8 +43,8 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 5vw;
-    padding: 0 5vw;
+    margin: calc(var(--font-size) * 2) 5vw;
+    padding: calc(var(--font-size) * 2) 5vw;
     width: 90vw;
 }
 
@@ -77,17 +77,26 @@ body{
     width: 100vw;
 }
 
+.link{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
 .link div{
-    width: calc(var(--font-size) * 5);
+    width: calc(var(--font-size) * 7);
 }
 
 .link img{
     border-radius: 50%;
-    width: calc(var(--font-size) * 4);
+    width: calc(var(--font-size) * 7);
 }
 
 .link p{
-    width: calc(var(--font-size) * 5);
+    text-align: center;
+    width: calc(var(--font-size) * 7);
 }
 
 #footer{
