@@ -4,9 +4,11 @@
     --font-size: calc(var(--width) / 23);
     --border: calc(var(--font-size) / 10);
 }
+
 body{
     font-size: var(--font-size);
 }
+
 #header{
     background-color: black;
     height: calc(var(--font-size) * 2);
@@ -15,6 +17,7 @@ body{
     top: 0;
     width: 100vw;
 }
+
 #div_body{
     align-items: center;
     background-color: white;
@@ -26,6 +29,7 @@ body{
     top: calc(var(--font-size) * 2);
     width: 100vw;
 }
+
 #videoContainer{
     align-items: center;
     background-color: grey;
@@ -37,6 +41,23 @@ body{
     padding: var(--font-size);
     width: 90vw;
 }
+
+#videoContainerRight{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: var(--width);
+}
+
+#videoIframe{
+    height: calc(var(--width) / 16 * 9);
+    margin: 0;
+    padding: 0;
+    width: var(--width);
+}
+
 #footer{
     background-color: black;
 }
