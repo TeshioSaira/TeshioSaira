@@ -61,6 +61,20 @@ body{
     width: var(--width);
 }
 
+#linkContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.link *{
+    width: 30vh;
+}
+
 #footer{
     background-color: black;
 }
