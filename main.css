@@ -245,6 +245,13 @@ body{
     width: 100vw;
 }
 
+#footer h2{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.75em;
+    text-align: center;
+    width: 100vw;
+}
+
 #footerContainer{
     align-content: flex-start;
     align-items: flex-start;
