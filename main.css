@@ -158,6 +158,14 @@ body{
     width: var(--width);
 }
 
+#linkH2{
+    color: var(--color-text);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-align: center;
+    width: 100vw;
+}
+
 #linkContainer{
     display: flex;
     flex-direction: row;
