@@ -51,6 +51,7 @@ body{
     margin: 0;
     padding: 0;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    width: fit-content;
 }
 
 #div_body{
