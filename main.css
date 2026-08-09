@@ -55,6 +55,7 @@ body{
     letter-spacing: 0.12em;
     margin: 0 var(--font-size);
     padding: 0;
+    text-decoration: none;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     width: fit-content;
 }
@@ -236,12 +237,14 @@ body{
     padding: calc(var(--font-size) * 0.8) 0;
     width: 100vw;
 }
+
 #footer p{
     color: rgba(255, 255, 255, 0.85);
     font-size: 0.75em;
     text-align: center;
     width: 100vw;
 }
+
 #footerContainer{
     align-content: flex-start;
     align-items: flex-start;
@@ -253,9 +256,17 @@ body{
 }
 
 #footerContainer a{
+    margin: 0 calc(var(--font-size) * 2);
+    padding: 0;
+    text-decoration: none;
+    width: fit-content;
+}
+
+#footerContainer a p{
     color: rgba(255, 255, 255, 0.85);
     font-size: 0.75em;
-    margin: 0 calc(var(--font-size) * 2);
+    margin: 0;
+    padding: 0;
     text-align: center;
-    width: 100vw;
+    width: fit-content;
 }
