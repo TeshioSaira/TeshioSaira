@@ -252,6 +252,7 @@ body{
 }
 
 #footerContainer{
+    color: rgba(255, 255, 255, 0.85);
     align-content: flex-start;
     align-items: flex-start;
     display: flex;
@@ -262,6 +263,7 @@ body{
 }
 
 #footerContainer a{
+    color: rgba(255, 255, 255, 0.85);
     margin: 0 calc(var(--font-size) * 2);
     padding: 0;
     text-decoration: none;
