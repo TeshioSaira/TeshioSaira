@@ -24,6 +24,7 @@ body{
 }
 
 #header{
+    align-items: center;
     background: linear-gradient(
         135deg,
         var(--color-header),
@@ -31,6 +32,11 @@ body{
     );
     box-shadow: 0 4px 15px rgba(60, 40, 90, 0.18);
     color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: calc(var(--font-size) * 3);
+    justify-content: space-between;
     left: 0;
     margin: 0;
     padding: 0;
@@ -39,7 +45,7 @@ body{
     width: 100vw;
 }
 
-#header p{
+#header *{
     font-weight: bold;
     letter-spacing: 0.12em;
     margin: 0;
