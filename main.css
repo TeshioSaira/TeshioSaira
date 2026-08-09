@@ -48,7 +48,7 @@ body{
 #header *{
     font-weight: bold;
     letter-spacing: 0.12em;
-    margin: 0;
+    margin: 0 var(--font-size);
     padding: 0;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     width: fit-content;
