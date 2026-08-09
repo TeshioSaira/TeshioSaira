@@ -15,6 +15,10 @@
     --color-footer: #30283b;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -46,6 +50,7 @@ body{
 }
 
 #header *{
+    color: var(--color-white);
     font-weight: bold;
     letter-spacing: 0.12em;
     margin: 0 var(--font-size);
@@ -234,6 +239,23 @@ body{
 #footer p{
     color: rgba(255, 255, 255, 0.85);
     font-size: 0.75em;
+    text-align: center;
+    width: 100vw;
+}
+#footerContainer{
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+#footerContainer a{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.75em;
+    margin: 0 calc(var(--font-size) * 2);
     text-align: center;
     width: 100vw;
 }
