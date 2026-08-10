@@ -2,14 +2,32 @@ import json
 import urllib.request
 import xml.etree.ElementTree as ET
 
-CHANNEL_ID = "UCv1fFr156jc65EMiLbaLImw"
+CHANNEL_ID = "UCVWkNZrxHRH4d3S_1L2gT_Q"
 RSS_URL = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
+
+print("RSS URL:", RSS_URL)
+request = urllib.request.Request(
+    RSS_URL,
+    headers={
+        "User-Agent": "Mozilla/5.0"
+    }
+)
+with urllib.request.urlopen(request) as response:
+    print("Status:", response.status)
+    print("Final URL:", response.url)
+    xml_data = response.read()
 
 JSON_FILE = "videos.json"
 
 
 def get_videos_from_rss():
-    with urllib.request.urlopen(RSS_URL) as response:
+    request = urllib.request.Request(
+        RSS_URL,
+        headers={
+            "User-Agent": "Mozilla/5.0"
+        }
+    )
+    with urllib.request.urlopen(request) as response:
         xml_data = response.read()
     root = ET.fromstring(xml_data)
     namespace = {
