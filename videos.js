@@ -23,6 +23,7 @@ async function setVideos(){
                 already_stream_type[already_stream_type.length] = ty;
                 var details1 = document.createElement("details");
                 details1.setAttribute("id", "videos_stream_type_" + ty);
+                details1.setAttribute("style", "order: " + already_stream_type.length + ";");
                 var summary1 = document.createElement("summary");
                 summary1.textContent = ty;
                 details1.appendChild(summary1);
