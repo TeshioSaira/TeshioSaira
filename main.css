@@ -15,6 +15,8 @@
     --color-text-light: #766c82;
     --color-header: #30283b;
     --color-footer: #30283b;
+    --thumbnail-width: min(45vw, calc(var(--font-size) * 25));
+    --thumbnail-height: calc(var(--thumbnail-width) / 16 * 9);
 }
 
 a{
@@ -297,15 +299,19 @@ body{
     width: 100vw;
 }
 #videos_container > details{
+    align-content: flex-start;
     align-items: center;
     color: var(--color-text);
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 0;
     padding: 0;
     width: 100vw;
+}
+#videos_container > details > summary{
+    cursor: pointer;
 }
 #videos_container > details > div{
     align-items: center;
@@ -323,18 +329,18 @@ body{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: var(--font-size) 0;
+    margin: calc(var(--thumbnail-width) * 0.1) 0;
     padding: 0;
-    width: 90vw;
+    width: calc(var(--thumbnail-width) * 2.1);
 }
 #videos_container > details > div > img{
     border: calc(var(--font-size) * 0.08) solid rgba(255, 255, 255, 0.65);
     border-radius: calc(var(--font-size) * 0.45);
     box-shadow: 0 8px 25px rgba(40, 25, 70, 0.30);
-    height: calc(min(50vw, calc(var(--font-size) * 25)) / 16 * 9);
+    height: var(--thumbnail-height);
     margin: 0;
     padding: 0;
-    width: min(50vw, calc(var(--font-size) * 25));
+    width: var(--thumbnail-width);
 }
 #videos_container > details > div > div{
     align-items: center;
@@ -344,10 +350,10 @@ body{
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    width: 40vw;
+    width: var(--thumbnail-width);
 }
 #videos_container > details > div > div > p{
     margin: calc(var(--font-size) / 2);
     padding: 0;
-    width: 40vw;
+    width: var(--thumbnail-width);
 }
