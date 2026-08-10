@@ -11,7 +11,9 @@ async function getNewestVideo(){
             newestNumber = i;
         }
     }
-    document.getElementById("videoIframe").setAttribute("src", videos[newestNumber]["url"]);
+    var iframe = document.getElementById("videoIframe");
+    iframe.setAttribute("src", videos[newestNumber]["url"]);
+    iframe.contentWindow.location.reload()
     document.getElementById("videoTitle").textContent = videos[newestNumber]["title"];
 }
 
