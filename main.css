@@ -15,7 +15,7 @@
     --color-text-light: #766c82;
     --color-header: #30283b;
     --color-footer: #30283b;
-    --thumbnail-width: min(40vw, calc(var(--font-size) * 23));
+    --thumbnail-width: min(22vw, calc(var(--font-size) * 20));
     --thumbnail-height: calc(var(--thumbnail-width) / 16 * 9);
 }
 
@@ -312,7 +312,7 @@ body{
     justify-content: space-around;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 90vw;
 }
 #videos_container > details > summary{
     cursor: pointer;
@@ -381,7 +381,7 @@ body{
     width: var(--thumbnail-width);
 }
 #videos_container > details > div > a > div > p{
-    margin: calc(var(--font-size) / 2);
+    margin: calc(var(--font-size) / 2) 0;
     padding: 0;
     width: var(--thumbnail-width);
 }
