@@ -292,11 +292,8 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    left: 0;
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: calc(var(--font-size) * 3);
     width: 100vw;
 }
 #videos_container details{
