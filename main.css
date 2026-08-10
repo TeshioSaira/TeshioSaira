@@ -15,7 +15,7 @@
     --color-text-light: #766c82;
     --color-header: #30283b;
     --color-footer: #30283b;
-    --thumbnail-width: calc(var(--width) / 2);
+    --thumbnail-width: min(40vw, calc(20vh / 9 * 16));
     --thumbnail-height: calc(var(--thumbnail-width) / 16 * 9);
 }
 
