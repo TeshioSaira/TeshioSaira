@@ -34,6 +34,7 @@ def get_videos_from_rss():
         media_group = entry.find("media:group", namespace)
         thumbnail_url = None
         description = None
+        stream_type = None
         if media_group is not None:
             thumbnail = media_group.find("media:thumbnail", namespace)
             if thumbnail is not None:
@@ -44,12 +45,15 @@ def get_videos_from_rss():
                 )
                 if description_element is not None:
                     description = description_element.text
+                    if len(description.split("\n配信種類：")) > 1:
+                        stream_type = description.split("\n配信種類：")[1].split("\n")[0]
         videos.append({
             "id": video_id,
             "title": title,
             "publishedAt": published,
             "thumbnail": thumbnail_url,
             "description": description,
+            "stream_type": stream_type,
             "url": f"https://www.youtube.com/watch?v={video_id}"
         })
     return videos
