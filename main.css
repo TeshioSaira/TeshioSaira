@@ -321,16 +321,16 @@ body{
     width: calc(var(--thumbnail-width) * 2.2);
 }
 #videos_container > details > div{
-    align-content: flex-start;
-    align-items: center;
+    align-content: stretch;
+    align-items: stretch;
     color: var(--color-text);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 90vw;
 }
 #videos_container > details > div > a{
     align-items: center;
