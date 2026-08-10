@@ -303,8 +303,8 @@ body{
     align-items: center;
     color: var(--color-text);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: space-around;
     margin: 0;
     padding: 0;
@@ -314,6 +314,18 @@ body{
     cursor: pointer;
 }
 #videos_container > details > div{
+    align-content: flex-start;
+    align-items: center;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+#videos_container > details > div > div{
     align-items: center;
     background:
         linear-gradient(
@@ -333,7 +345,7 @@ body{
     padding: 0;
     width: calc(var(--thumbnail-width) * 2.1);
 }
-#videos_container > details > div > img{
+#videos_container > details > div > div > img{
     border: calc(var(--font-size) * 0.08) solid rgba(255, 255, 255, 0.65);
     border-radius: calc(var(--font-size) * 0.45);
     box-shadow: 0 8px 25px rgba(40, 25, 70, 0.30);
@@ -342,7 +354,7 @@ body{
     padding: 0;
     width: var(--thumbnail-width);
 }
-#videos_container > details > div > div{
+#videos_container > details > div > div > div{
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -352,7 +364,7 @@ body{
     padding: 0;
     width: var(--thumbnail-width);
 }
-#videos_container > details > div > div > p{
+#videos_container > details > div > div > div > p{
     margin: calc(var(--font-size) / 2);
     padding: 0;
     width: var(--thumbnail-width);
