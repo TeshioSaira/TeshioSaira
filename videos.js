@@ -6,7 +6,7 @@ async function setVideos(){
     data["videos"].forEach(element => {
         var div1 = document.createElement("div");
         var img1 = document.createElement("img");
-        img1.setAttribute("src", element["thumbnail"]);
+        img1.setAttribute("src", "https://img.youtube.com/vi/" + element["id"] + "/maxresdefault.jpg");
         div1.appendChild(img1);
         var div2 = document.createElement("div");
         div1.appendChild(div2);
