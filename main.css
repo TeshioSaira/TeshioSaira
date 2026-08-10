@@ -331,10 +331,10 @@ body{
     border: calc(var(--font-size) * 0.08) solid rgba(255, 255, 255, 0.65);
     border-radius: calc(var(--font-size) * 0.45);
     box-shadow: 0 8px 25px rgba(40, 25, 70, 0.30);
-    height: calc(min(50vw, calc(var(--font-size) * 14)) / 16 * 9);
+    height: calc(min(50vw, calc(var(--font-size) * 25)) / 16 * 9);
     margin: 0;
     padding: 0;
-    width: min(50vw, calc(var(--font-size) * 14));
+    width: min(50vw, calc(var(--font-size) * 25));
 }
 #videos_container > details > div > div{
     align-items: center;
