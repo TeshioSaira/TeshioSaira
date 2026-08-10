@@ -10,10 +10,15 @@ JSON_FILE = "videos.json"
 def youtube_api(url, params):
     params["key"] = API_KEY
     query = urllib.parse.urlencode(params)
-    with urllib.request.urlopen(
-        url + "?" + query
-    ) as response:
-        return json.loads(response.read())
+    try:
+        with urllib.request.urlopen(
+            url + "?" + query
+        ) as response:
+            return json.loads(response.read())
+    except urllib.error.HTTPError as e:
+        print("HTTP Error:", e.code)
+        print(e.read().decode("utf-8"))
+        raise
 
 def get_videos():
     data = youtube_api(
