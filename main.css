@@ -15,7 +15,7 @@
     --color-text-light: #766c82;
     --color-header: #30283b;
     --color-footer: #30283b;
-    --thumbnail-width: min(45vw, calc(var(--font-size) * 25));
+    --thumbnail-width: min(40vw, calc(var(--font-size) * 23));
     --thumbnail-height: calc(var(--thumbnail-width) / 16 * 9);
 }
 
@@ -301,6 +301,10 @@ body{
 #videos_container > details{
     align-content: flex-start;
     align-items: center;
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(139, 111, 201, 0.10);
+    border-radius: calc(var(--font-size) * 0.8);
+    box-shadow: 0 6px 20px rgba(70, 50, 100, 0.08);
     color: var(--color-text);
     display: flex;
     flex-direction: column;
@@ -312,6 +316,8 @@ body{
 }
 #videos_container > details > summary{
     cursor: pointer;
+    padding: var(--font-size);
+    width: calc(var(--thumbnail-width) * 2.2);
 }
 #videos_container > details > div{
     align-content: flex-start;
@@ -325,7 +331,7 @@ body{
     padding: 0;
     width: 100vw;
 }
-#videos_container > details > div > div{
+#videos_container > details > div > a{
     align-items: center;
     background:
         linear-gradient(
@@ -341,11 +347,21 @@ body{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: calc(var(--thumbnail-width) * 0.1) 0;
+    margin: calc(var(--thumbnail-width) * 0.05) 0;
     padding: 0;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
     width: calc(var(--thumbnail-width) * 2.1);
 }
-#videos_container > details > div > div > img{
+
+#videos_container > details > div > a:hover{
+    background-color: var(--color-white);
+    box-shadow: 0 10px 25px rgba(100, 70, 140, 0.18);
+    transform: translateY(-6px);
+}
+#videos_container > details > div > a > img{
     border: calc(var(--font-size) * 0.08) solid rgba(255, 255, 255, 0.65);
     border-radius: calc(var(--font-size) * 0.45);
     box-shadow: 0 8px 25px rgba(40, 25, 70, 0.30);
@@ -354,7 +370,7 @@ body{
     padding: 0;
     width: var(--thumbnail-width);
 }
-#videos_container > details > div > div > div{
+#videos_container > details > div > a > div{
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -364,7 +380,7 @@ body{
     padding: 0;
     width: var(--thumbnail-width);
 }
-#videos_container > details > div > div > div > p{
+#videos_container > details > div > a > div > p{
     margin: calc(var(--font-size) / 2);
     padding: 0;
     width: var(--thumbnail-width);

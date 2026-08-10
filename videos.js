@@ -4,7 +4,8 @@ async function setVideos(){
     const data = await response.json();
     var already_stream_type = [];
     data["videos"].forEach(element => {
-        var div1 = document.createElement("div");
+        var div1 = document.createElement("a");
+        div1.setAttribute("href", element["url"]);
         var img1 = document.createElement("img");
         img1.setAttribute("src", "https://img.youtube.com/vi/" + element["id"] + "/maxresdefault.jpg");
         div1.appendChild(img1);
