@@ -4,7 +4,7 @@ import urllib.parse
 import urllib.request
 
 API_KEY = os.environ["YOUTUBE_API_KEY"]
-CHANNEL_ID = "@HohnoAbla"
+CHANNEL_ID = "@TeshioSaira"
 JSON_FILE = "videos.json"
 
 def youtube_api(url, params):
