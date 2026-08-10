@@ -294,16 +294,21 @@ body{
     justify-content: center;
     margin: 0;
     padding: 0;
-    position: relative;
     width: 100vw;
 }
 #videos_container > details{
+    align-items: center;
     color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     width: 100vw;
 }
 #videos_container > details > div{
+    align-items: center;
     background:
         linear-gradient(
             135deg,
@@ -314,7 +319,6 @@ body{
     border-radius: calc(var(--font-size) * 0.45);
     box-shadow: 0 15px 35px rgba(70, 50, 100, 0.22);
     color: var(--color-white);
-    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
