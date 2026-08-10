@@ -79,3 +79,7 @@ def main():
         )
     print(f"取得した動画: {len(new_videos)}")
     print(f"新しく追加した動画: {added}")
+
+if __name__ == "__main__":
+
+    main()
