@@ -5,6 +5,8 @@ import xml.etree.ElementTree as ET
 CHANNEL_ID = "UCVWkNZrxHRH4d3S_1L2gT_Q"
 RSS_URL = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
 
+print("RSS URL:", RSS_URL)
+
 JSON_FILE = "videos.json"
 
 
