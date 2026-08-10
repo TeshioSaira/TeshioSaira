@@ -4,21 +4,7 @@ import xml.etree.ElementTree as ET
 
 CHANNEL_ID = "UCVWkNZrxHRH4d3S_1L2gT_Q"
 RSS_URL = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
-
-print("RSS URL:", RSS_URL)
-request = urllib.request.Request(
-    RSS_URL,
-    headers={
-        "User-Agent": "Mozilla/5.0"
-    }
-)
-with urllib.request.urlopen(request) as response:
-    print("Status:", response.status)
-    print("Final URL:", response.url)
-    xml_data = response.read()
-
 JSON_FILE = "videos.json"
-
 
 def get_videos_from_rss():
     request = urllib.request.Request(
@@ -27,8 +13,13 @@ def get_videos_from_rss():
             "User-Agent": "Mozilla/5.0"
         }
     )
-    with urllib.request.urlopen(request) as response:
-        xml_data = response.read()
+    try:
+        with urllib.request.urlopen(request) as response:
+            xml_data = response.read()
+    except urllib.error.HTTPError as e:
+        print(f"RSS取得失敗: HTTP {e.code}")
+        print("次回の実行で再試行します。")
+        return []
     root = ET.fromstring(xml_data)
     namespace = {
         "atom": "http://www.w3.org/2005/Atom",
@@ -66,6 +57,9 @@ def get_videos_from_rss():
 
 def main():
     new_videos = get_videos_from_rss()
+    if not new_videos:
+        print("取得できる動画がありませんでした。")
+        return
     try:
         with open(JSON_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
