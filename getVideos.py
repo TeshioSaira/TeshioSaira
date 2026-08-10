@@ -2,7 +2,7 @@ import json
 import urllib.request
 import xml.etree.ElementTree as ET
 
-CHANNEL_ID = "UCv1fFr156jc65EMiLbaLImw"
+CHANNEL_ID = "UCVWkNZrxHRH4d3S_1L2gT_Q"
 RSS_URL = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
 
 JSON_FILE = "videos.json"
@@ -14,17 +14,33 @@ def get_videos_from_rss():
     root = ET.fromstring(xml_data)
     namespace = {
         "atom": "http://www.w3.org/2005/Atom",
-        "yt": "http://www.youtube.com/xml/schemas/2015"
+        "yt": "http://www.youtube.com/xml/schemas/2015",
+        "media": "http://search.yahoo.com/mrss/"
     }
     videos = []
     for entry in root.findall("atom:entry", namespace):
         video_id = entry.find("yt:videoId", namespace).text
         title = entry.find("atom:title", namespace).text
         published = entry.find("atom:published", namespace).text
+        media_group = entry.find("media:group", namespace)
+        thumbnail_url = None
+        description = None
+        if media_group is not None:
+            thumbnail = media_group.find("media:thumbnail", namespace)
+            if thumbnail is not None:
+                thumbnail_url = thumbnail.get("url")
+                description_element = media_group.find(
+                    "media:description",
+                    namespace
+                )
+                if description_element is not None:
+                    description = description_element.text
         videos.append({
             "id": video_id,
             "title": title,
             "publishedAt": published,
+            "thumbnail": thumbnail_url,
+            "description": description,
             "url": f"https://www.youtube.com/watch?v={video_id}"
         })
     return videos
