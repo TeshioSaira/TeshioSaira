@@ -1,7 +1,7 @@
 async function setVideos(){
     var container = document.getElementById("videos_container");
     const response = await fetch("videos.json");
-    const data = response.json();
+    const data = await response.json();
     var already_stream_type = [];
     data["videos"].forEach(element => {
         var div1 = document.createElement("div");
@@ -19,7 +19,7 @@ async function setVideos(){
         var ty = "その他";
         if(element["stream_type"]){
             ty = element["stream_type"];
-            if( !(ty in already_stream_type) ){
+            if(!already_stream_type.includes(ty)){
                 already_stream_type[already_stream_type.length] = ty;
                 var details1 = document.createElement("details");
                 details1.setAttribute("id", "videos_stream_type_" + ty);
