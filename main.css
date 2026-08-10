@@ -316,6 +316,7 @@ body{
 }
 #videos_container > details > summary{
     cursor: pointer;
+    font-size: var(--font-size);
     padding: var(--font-size);
     width: calc(var(--thumbnail-width) * 2.2);
 }
@@ -381,6 +382,7 @@ body{
     width: var(--thumbnail-width);
 }
 #videos_container > details > div > a > div > p{
+    font-size: var(--font-size);
     margin: calc(var(--font-size) / 2) 0;
     padding: 0;
     width: var(--thumbnail-width);
