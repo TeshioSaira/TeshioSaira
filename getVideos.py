@@ -42,6 +42,7 @@ def get_videos():
 
 def main():
     new_videos = get_videos()
+    print(new_videos)
     with open(
         JSON_FILE,
         "r",
