@@ -275,6 +275,10 @@ details[open]::details-content {
     width: 100vw;
 }
 
+#footer div{
+    display: flex;
+}
+
 #footerContainer{
     color: rgba(255, 255, 255, 0.85);
     align-items: center;
