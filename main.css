@@ -45,7 +45,7 @@ details::details-content {
 }
 
 details[open]::details-content {
-  height: auto; /* for unsupported browser */
+  height: auto;
   height: calc-size(auto, size);
   opacity: 1;
 }
@@ -402,5 +402,5 @@ details[open]::details-content {
     font-size: var(--font-size);
     margin: calc(var(--font-size) / 2) 0;
     padding: 0;
-    width: var(--thumbnail-width);
+    width: calc(var(--thumbnail-width) * 0.9);
 }
