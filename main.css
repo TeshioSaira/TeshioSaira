@@ -15,7 +15,7 @@
     --color-text-light: #766c82;
     --color-header: #30283b;
     --color-footer: #30283b;
-    --thumbnail-width: min(40vw, calc(20vh / 9 * 16));
+    --thumbnail-width: max(calc(((20vh / 9 * 16) + 20000vw + ((20vh / 9 * 16 - 40vw) / abs(calc(20vh / 9 * 16 - 40vw)) * 20000vw)) / 1000), min(calc(20vh / 9 * 16), 40vw));
     --thumbnail-height: calc(var(--thumbnail-width) / 16 * 9);
 }
 
