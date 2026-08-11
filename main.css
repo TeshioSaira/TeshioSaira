@@ -76,6 +76,7 @@ details[open]::details-content {
 #header *{
     color: var(--color-white);
     font-weight: bold;
+    height: calc(var(--font-size) * 3);
     letter-spacing: 0.12em;
     margin: 0 var(--font-size);
     padding: 0;
