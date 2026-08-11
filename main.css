@@ -17,6 +17,9 @@
     --color-footer: #30283b;
     --thumbnail-width: max(calc(((20vh / 9 * 16) + 20000vw + ((20vh / 9 * 16 - 40vw) / abs(calc(20vh / 9 * 16 - 40vw)) * 20000vw)) / 1000), min(calc(20vh / 9 * 16), 40vw));
     --thumbnail-height: calc(var(--thumbnail-width) / 16 * 9);
+
+
+    interpolate-size: allow-keywords;
 }
 
 a{
@@ -31,6 +34,20 @@ body{
     font-style: normal;
     overflow: hidden;
     overflow-y: auto;
+}
+
+details::details-content {
+  height: 0;
+  overflow: clip;
+  opacity: 0;
+  transition: height 0.4s ease, opacity 0.4s ease,
+    content-visibility 0.4s ease allow-discrete;
+}
+
+details[open]::details-content {
+  height: auto; /* for unsupported browser */
+  height: calc-size(auto, size);
+  opacity: 1;
 }
 
 #header{
