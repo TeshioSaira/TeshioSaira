@@ -318,10 +318,6 @@ details[open]::details-content {
 #videos_container > details{
     align-content: flex-start;
     align-items: center;
-    background: rgba(255, 255, 255, 0.75);
-    border: 2px solid rgba(139, 111, 201, 0.10);
-    border-radius: calc(var(--font-size) * 0.8);
-    box-shadow: 0 6px 20px rgba(70, 50, 100, 0.08);
     color: var(--color-text);
     display: flex;
     flex-direction: column;
@@ -332,10 +328,15 @@ details[open]::details-content {
     width: 90vw;
 }
 #videos_container > details > summary{
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(139, 111, 201, 0.10);
+    border-radius: calc(var(--font-size) * 0.8);
+    box-shadow: 0 6px 20px rgba(70, 50, 100, 0.08);
     cursor: pointer;
     font-size: var(--font-size);
+    margin: 0;
     padding: var(--font-size);
-    width: calc(var(--thumbnail-width) * 2.2);
+    width: 90vw;
 }
 #videos_container > details > div{
     align-content: stretch;
@@ -344,25 +345,20 @@ details[open]::details-content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     width: 90vw;
 }
 #videos_container > details > div > a{
     align-items: center;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(139, 111, 201, 0.96),
-            rgba(89, 69, 143, 0.96)
-        );
-    border: calc(var(--font-size) * 0.08) solid rgba(255, 255, 255, 0.65);
-    border-radius: calc(var(--font-size) * 0.45);
-    box-shadow: 0 15px 35px rgba(70, 50, 100, 0.22);
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(139, 111, 201, 0.10);
+    border-radius: calc(var(--font-size) * 0.8);
+    box-shadow: 0 6px 20px rgba(70, 50, 100, 0.08);
     color: var(--color-white);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     margin: calc(var(--thumbnail-width) * 0.05) 0;
@@ -371,7 +367,7 @@ details[open]::details-content {
         transform 0.2s ease,
         box-shadow 0.2s ease,
         background-color 0.2s ease;
-    width: calc(var(--thumbnail-width) * 2.1);
+    width: var(--thumbnail-width);
 }
 
 #videos_container > details > div > a:hover{
