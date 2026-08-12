@@ -478,20 +478,18 @@ details[open]::details-content {
     justify-content: space-around;
     margin: 0;
     padding: 0;
-    width: var(--width);
+    width: 40vw;
 }
 #history_container > div > img{
     border: calc(var(--font-size) * 0.08) solid rgba(255, 255, 255, 0.65);
     border-radius: calc(var(--font-size) * 0.45);
     box-shadow: 0 8px 25px rgba(40, 25, 70, 0.30);
-    height: calc(var(--width) / 600 * 371);
     margin: 0;
     padding: 0;
-    width: var(--width);
 }
 #history_container > div > h2{
     color: var(--color-text);
     margin: 0;
     padding: 0;
-    width: var(--width);
+    width: 40vw;
 }
