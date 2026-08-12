@@ -122,6 +122,68 @@ details[open]::details-content {
     width: 100vw;
 }
 
+#footer{
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-footer),
+            var(--color-main-dark)
+        );
+    color: var(--color-white);
+    margin-top: calc(var(--font-size) * 1.5);
+    padding: calc(var(--font-size) * 0.8) 0;
+    width: 100vw;
+}
+
+#footer p{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--font-size);
+    text-align: center;
+    width: 100vw;
+}
+
+#footer h2{
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    width: 100vw;
+}
+
+#footer div{
+    display: flex;
+}
+
+#footerContainer{
+    color: rgba(255, 255, 255, 0.85);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+#footerContainer a{
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 calc(var(--font-size) * 2);
+    padding: 0;
+    text-decoration: none;
+    width: fit-content;
+}
+
+#footerContainer a p{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--font-size);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: fit-content;
+}
+
+
+
+
+/* index.html */
+
 #index_videoContainer{
     align-items: center;
     background:
@@ -270,7 +332,7 @@ details[open]::details-content {
     border-radius: calc(var(--font-size) * 0.8);
     box-shadow: 0 6px 20px rgba(70, 50, 100, 0.08);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     margin: calc(var(--font-size) * 0.3);
@@ -294,63 +356,6 @@ details[open]::details-content {
     letter-spacing: 0.05em;
     text-align: center;
     width: calc(var(--font-size) * 7);
-}
-
-#footer{
-    background:
-        linear-gradient(
-            135deg,
-            var(--color-footer),
-            var(--color-main-dark)
-        );
-    color: var(--color-white);
-    margin-top: calc(var(--font-size) * 1.5);
-    padding: calc(var(--font-size) * 0.8) 0;
-    width: 100vw;
-}
-
-#footer p{
-    color: rgba(255, 255, 255, 0.85);
-    font-size: var(--font-size);
-    text-align: center;
-    width: 100vw;
-}
-
-#footer h2{
-    color: rgba(255, 255, 255, 0.85);
-    text-align: center;
-    width: 100vw;
-}
-
-#footer div{
-    display: flex;
-}
-
-#footerContainer{
-    color: rgba(255, 255, 255, 0.85);
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    width: 100vw;
-}
-
-#footerContainer a{
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0 calc(var(--font-size) * 2);
-    padding: 0;
-    text-decoration: none;
-    width: fit-content;
-}
-
-#footerContainer a p{
-    color: rgba(255, 255, 255, 0.85);
-    font-size: var(--font-size);
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: fit-content;
 }
 
 
