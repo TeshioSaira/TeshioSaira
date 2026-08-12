@@ -55,7 +55,7 @@ details[open]::details-content {
     background: linear-gradient(
         135deg,
         var(--color-header),
-        var(--color-main-dark)
+        var(--color-white)
     );
     box-shadow: 0 4px 15px rgba(60, 40, 90, 0.18);
     color: var(--color-white);
@@ -229,6 +229,7 @@ details[open]::details-content {
 }
 
 #index_videoContainer h2{
+    color: var(--color-white);
     letter-spacing: 0.08em;
     line-height: 1.7;
     position: relative;
