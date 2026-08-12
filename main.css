@@ -54,8 +54,8 @@ details[open]::details-content {
     align-items: center;
     background: linear-gradient(
         135deg,
-        var(--color-header),
-        var(--color-white)
+        var(--color-white),
+        var(--color-main-dark)
     );
     box-shadow: 0 4px 15px rgba(60, 40, 90, 0.18);
     color: var(--color-white);
@@ -232,8 +232,11 @@ details[open]::details-content {
     color: var(--color-white);
     letter-spacing: 0.08em;
     line-height: 1.7;
+    margin: 0;
+    padding: 0;
     position: relative;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    width: fit-content;
     z-index: 1;
 }
 
