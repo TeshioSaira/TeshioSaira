@@ -54,8 +54,8 @@ details[open]::details-content {
     align-items: center;
     background: linear-gradient(
         135deg,
-        var(--color-main),
-        var(--color-main-dark)
+        var(--color-main-dark),
+        var(--color-header)
     );
     box-shadow: 0 4px 15px rgba(60, 40, 90, 0.18);
     color: var(--color-white);
@@ -459,4 +459,39 @@ details[open]::details-content {
     margin: calc(var(--font-size) / 2) 0;
     padding: 0;
     width: calc(var(--thumbnail-width) * 0.9);
+}
+
+
+#history_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+#history_container > div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    width: var(--width);
+}
+#history_container > div > img{
+    border: calc(var(--font-size) * 0.08) solid rgba(255, 255, 255, 0.65);
+    border-radius: calc(var(--font-size) * 0.45);
+    box-shadow: 0 8px 25px rgba(40, 25, 70, 0.30);
+    height: calc(var(--width) / 600 * 371);
+    margin: 0;
+    padding: 0;
+    width: var(--width);
+}
+#history_container > div > h2{
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    width: var(--width);
 }
