@@ -54,7 +54,7 @@ details[open]::details-content {
     align-items: center;
     background: linear-gradient(
         135deg,
-        var(--color-white),
+        var(--color-main),
         var(--color-main-dark)
     );
     box-shadow: 0 4px 15px rgba(60, 40, 90, 0.18);

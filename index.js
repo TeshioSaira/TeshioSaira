@@ -3,6 +3,7 @@ async function loadFollowers() {
     const data = await response.json();
     console.log(data);
     document.getElementById("index_subscriber_youtube").textContent = data["YouTube"];
+    document.getElementById("index_subscriber_twitch").textContent = data["Twitch"];
 }
 
 window.addEventListener("load", function() {
