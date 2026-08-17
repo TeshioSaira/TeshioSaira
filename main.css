@@ -204,7 +204,7 @@ details[open]::details-content {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: calc(var(--font-size) * 2);
+    margin: calc(var(--font-size) * 1);
     overflow: hidden;
     padding: calc(var(--font-size) * 2);
     position: relative;
