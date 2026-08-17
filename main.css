@@ -252,9 +252,9 @@ details[open]::details-content {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 var(--font-size);
     padding: 0;
-    width: var(--width);
+    width: calc(var(--width) - var(--font-size) * 2);
 }
 
 #index_videoContainerRight p{
