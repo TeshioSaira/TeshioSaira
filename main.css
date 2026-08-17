@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
 :root{
-    --width: max(calc(((30vh / 9 * 16) + calc(calc(100vw - calc(var(--font-size) * 4)) * 500))) / 1000) + ((30vh / 9 * 16 - 60vw) / abs(calc(30vh / 9 * 16 - 60vw)) * calc(calc(100vw - calc(var(--font-size) * 4)) * 500))) / 1000), min(calc(30vh / 9 * 16), calc(100vw - calc(var(--font-size) * 4))));
+    --width: max(calc(((30vh / 9 * 16) + calc(calc(100vw - calc(var(--font-size) * 4)) * 500) + ((30vh / 9 * 16 - 60vw) / abs(calc(30vh / 9 * 16 - 60vw)) * calc(calc(100vw - calc(var(--font-size) * 4)) * 500))) / 1000), min(calc(30vh / 9 * 16), calc(100vw - calc(var(--font-size) * 4))));
     --height: calc(var(--width) / 16 * 9);
     --font-size: calc(min(max(calc(350vh / 9), 23vw), 90vw) / 20);
     --border: calc(var(--font-size) / 10);
