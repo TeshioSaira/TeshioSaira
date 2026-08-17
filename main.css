@@ -208,7 +208,7 @@ details[open]::details-content {
     overflow: hidden;
     padding: calc(var(--font-size) * 2);
     position: relative;
-    width: calc(100vw - (var(--font-size) * 4));
+    width: calc(100vw - calc(var(--font-size) * 4));
 }
 
 #index_videoContainer::before{
