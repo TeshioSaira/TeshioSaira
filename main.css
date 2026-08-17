@@ -206,9 +206,9 @@ details[open]::details-content {
     justify-content: space-around;
     margin: calc(var(--font-size) * 2);
     overflow: hidden;
-    padding: calc(var(--font-size) * 2) 0;
+    padding: calc(var(--font-size) * 2);
     position: relative;
-    width: calc(100vw - calc(var(--font-size) * 4));
+    width: calc(100vw - calc(var(--font-size) * 8));
 }
 
 #index_videoContainer::before{
@@ -241,7 +241,7 @@ details[open]::details-content {
     padding: 0;
     position: relative;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-    width: calc(100vw - calc(var(--font-size) * 4) - calc(var(--width) - var(--font-size) * 2));
+    width: fit-content;
     z-index: 1;
 }
 
