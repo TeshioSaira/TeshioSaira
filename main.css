@@ -508,26 +508,32 @@ details[open]::details-content {
     width: 100vw;
 }
 #setup_mainContent > div{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
-    position: relative;
     width: 100vw;
 }
 #setup_mainContent > div > img{
-    left: 0;
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: 0;
     width: 40vw;
 }
 #setup_mainContent > div > details, #setup_mainContent > div > div{
-    right: 0;
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: 0;
     width: 60vw;
+}
+#setup_mainContent > div > div{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 #setup_mainContent > div > details *, #setup_mainContent > div > div *{
     margin: 0;
