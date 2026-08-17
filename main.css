@@ -114,7 +114,7 @@ details[open]::details-content {
     width: 100vw;
 }
 
-#div_body h2{
+#div_body h2, #div_body a{
     color: var(--color-text);
     font-weight: bold;
     letter-spacing: 0.05em;
@@ -518,9 +518,11 @@ details[open]::details-content {
     width: 100vw;
 }
 #setup_mainContent > div > img{
+    max-height: 20vh;
+    min-height: 15vh;
+    max-width: 40vw;
     margin: 0;
     padding: 0;
-    width: 40vw;
 }
 #setup_mainContent > div > details, #setup_mainContent > div > div{
     margin: 0;
