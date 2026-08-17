@@ -2,7 +2,7 @@ import json
 import urllib.request
 import xml.etree.ElementTree as ET
 
-CHANNEL_ID = "UCVWkNZrxHRH4d3S_1L2gT_Q"
+CHANNEL_ID = "UCJUC_lEkBr33TaZBPdhjoMw"
 RSS_URL = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
 JSON_FILE = "videos.json"
 
