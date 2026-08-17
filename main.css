@@ -265,10 +265,10 @@ details[open]::details-content {
     border: calc(var(--font-size) * 0.08) solid rgba(255, 255, 255, 0.65);
     border-radius: calc(var(--font-size) * 0.45);
     box-shadow: 0 8px 25px rgba(40, 25, 70, 0.30);
-    height: calc(var(--width) / 16 * 9);
+    height: calc(calc(var(--width) - var(--font-size) * 2) / 16 * 9);
     margin: 0;
     padding: 0;
-    width: var(--width);
+    width: calc(var(--width) - var(--font-size) * 2);
 }
 
 #index_linkContainer{
