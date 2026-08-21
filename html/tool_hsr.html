@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset='utf-8'>
+        <title>崩壊：スターレイル ステータス計算機</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link rel='stylesheet' type='text/css' href='../css/main.css'>
+        <link rel='stylesheet' type='text/css' href='../css/tool_hsr.css'>
+        <script src="../javascript/main.js"></script>
+        <script src="../javascript/tool_hsr.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <a href="../html/index.html"><img src="../images/Teshio Saira/ロゴ.png"></a>
+            <a href="#footer"><h2>≡</h2></a>
+        </header>
+        <div id="div_body">
+            <div id="body_contents">
+                <h2>ステータス計算機</h2>
+                <div id="tool_hsr_base_div">
+                    <div class="tool_hsr_info_div">
+                        <h3>1枠目</h3>
+          
+                        <div class="tool_hsr_split_line"></div>
+
+                        <div class="tool_hsr_charaImg_div" onclick="selectChara(1);">
+                            <img class="tool_hsr_charaImg" id="1_charaImg" src="../images/hsr/chara/ファイノン.png">
+                        </div>
+                        <p onclick="selectChara(1);">
+                            <img class="tool_hsr_attributeImg" id="1_charaAttribute" src="../images/hsr/attribute/物理.jpeg">
+                            <span>　<span id="1_charaName">ファイノン</span>　</span>
+                            <img class="tool_hsr_attributeImg" id="1_charaDestiny" src="../images/hsr/destiny/壊滅.png">
+                        </p>
+          
+                        <div class="tool_hsr_split_line"></div>
+
+                        <h3>ステータス</h3>
+                        <div class="tool_hsr_cell" id="1_ステータス"></div>
+                        <p id="tool_hsr_statusDetail" onclick="statusDetail()">↓詳細を開く</p>
+          
+                        <div class="tool_hsr_split_line"></div>
+
+                        <h3>星魂</h3>
+          
+                        <div class="tool_hsr_split_line"></div>
+
+                        <h3>光円錐</h3>
+                        <div class="tool_hsr_lightCone_img_div">
+                            <img class="tool_hsr_lightCone_img" id="1_lightConeImg" src="https://lh3.googleusercontent.com/d/1crsi9wa-c1qVFECyGqkzRpAP0r5ktU8H">
+                        </div>
+                        <p>
+                            <img class="tool_hsr_attributeImg" id="1_lightConeDestiny" alt="知恵" src="https://lh3.googleusercontent.com/d/1fonUiQb--3ZzM6UVnj7d65kOwVH_xuOg">
+                            <span>　<span id="1_lightConeName">静かに瞬く小さな火</span>　</span>
+                        </p>
+          
+                        <div class="tool_hsr_split_line"></div>
+
+                        <h3>星魂</h3>
+                        <div class="tool_hsr_cell" id="1_星魂"></div>
+          
+                        <div class="tool_hsr_split_line"></div>
+
+                        <h3>天賦</h3>
+                        <div class="tool_hsr_cell" id="1_天賦"></div>
+          
+                        <div class="tool_hsr_split_line"></div>
+
+                        <h3>追加能力</h3>
+                        <div class="tool_hsr_cell" id="1_追加能力"></div>
+          
+                        <div class="tool_hsr_split_line"></div>
+          
+                        <h3>秘技</h3>
+                        <div class="tool_hsr_cell" id="1_秘技"></div>
+          
+                        <div class="tool_hsr_split_line"></div>
+          
+                        <h3>通常攻撃</h3>
+                        <div class="tool_hsr_cell" id="1_通常攻撃"></div>
+          
+                        <div class="tool_hsr_split_line"></div>
+          
+                        <h3>戦闘スキル</h3>
+                        <div class="tool_hsr_cell" id="1_戦闘スキル"></div>
+          
+                        <div class="tool_hsr_split_line"></div>
+          
+                        <h3>必殺技</h3>
+                        <div class="tool_hsr_cell" id="1_必殺技"></div>
+                        
+                        <div class="tool_hsr_split_line"></div>
+          
+                        <h3>必殺通常攻撃</h3>
+                        <div class="tool_hsr_cell" id="1_必殺通常攻撃"></div>
+          
+                        <div class="tool_hsr_split_line"></div>
+          
+                        <h3>必殺戦闘スキル</h3>
+                        <div class="tool_hsr_cell" id="1_必殺戦闘スキル"></div>
+          
+                        <div class="tool_hsr_split_line"></div>
+          
+                        <h3>必殺必殺技</h3>
+                        <div class="tool_hsr_cell" id="1_必殺必殺技"></div>
+
+                    </div>
+                </div>
+                <div id="tool_hsr_select" class="tool_hsr_allBase" style="display: none;">
+                    <h1 id="tool_hsr_select_title">1枠目のキャラクターを選択してください</h1>
+                    <div id="tool_hsr_select_div"></div>
+                </div>
+            </div>
+            <footer id="footer"></footer>
+        </div>
+    </body>
+</html>

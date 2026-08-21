@@ -1,0 +1,305 @@
+:root{
+    --height--tool_hsr: calc(700vh / 9);
+    --width--tool_hsr: min(max(calc(350vh / 9), 23vw), 90vw);
+}
+
+#body_contents *{
+    text-align: center;
+}
+
+.tool_hsr_allBase{
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(233, 168, 209, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(139, 111, 201, 0.18),
+            transparent 30%
+        ),
+        var(--color-bg);
+    position: fixed;
+    width: 90vw;
+    height: calc(95vh - (var(--font-size) * 4));
+    bottom: 5vh;
+    right: 5vw;
+    margin: 0;
+    overflow-y: auto;
+    padding: 0;
+}
+
+#tool_hsr_base{
+    z-index: 100;
+}
+
+#tool_hsr_select{
+    z-index: 200;
+}
+
+#tool_hsr_select_div{
+    width: 90vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+#tool_hsr_base_div{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.tool_hsr_wordOnImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.tool_hsr_attributeImg{
+    display: inline;
+    vertical-align: middle;
+    height: var(--font-size);
+    width: auto;
+    margin: 0 calc(var(--font-size) * 0.1);
+}
+
+.tool_hsr_buff_p{
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_attack_p{
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_attack_damage{
+}
+
+.tool_hsr_chara_div{
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(233, 168, 209, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(139, 111, 201, 0.18),
+            transparent 30%
+        ),
+        var(--color-bg);
+    border: var(--color-main-dark) solid var(--border);
+    width: var(--width--tool_hsr);
+    height: calc(var(--width--tool_hsr) / 16 * 9 + var(--font-size) * 2);
+    position: relative;
+    margin: var(--font-size) 0;
+    padding: 0;
+    border-bottom-right-radius: var(--font-size);
+    border-bottom-left-radius: var(--font-size);
+}
+
+.tool_hsr_chara_img_div{
+    width: var(--width--tool_hsr);
+    height: calc(var(--width--tool_hsr) / 16 * 9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_chara_img{
+    max-width: var(--width--tool_hsr);
+    max-height: calc(var(--width--tool_hsr) / 16 * 9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    padding: 0;
+}
+
+.tool_hsr_chara_p{
+    width: var(--width--tool_hsr);
+    position: absolute;
+    top: calc(var(--width--tool_hsr) / 16 * 9);
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_info_div{
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(233, 168, 209, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(139, 111, 201, 0.18),
+            transparent 30%
+        ),
+        var(--color-bg);
+    border: var(--color-main-dark) solid var(--border);
+    width: var(--width--tool_hsr);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    border-radius: var(--font-size);
+    margin: var(--font-size) 0;
+    padding: calc(var(--width--tool_hsr) * 0.05) 0;
+}
+
+.tool_hsr_info_div > *{
+    flex-grow: 1;
+    margin: var(--font-size) 0;
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_info_div h3{
+    width: var(--width--tool_hsr);
+}
+
+.tool_hsr_split_line{
+    width: calc(var(--width--tool_hsr) * 0.8);
+    height: 0;
+    border: var(--color-main-dark) solid var(--border);
+    margin: calc(var(--width--tool_hsr) * 0.05) calc(var(--width--tool_hsr) * 0.1);
+}
+
+.tool_hsr_charaImg_div{
+    width: var(--width--tool_hsr);
+    height: calc(var(--width--tool_hsr) / 16 * 9);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.tool_hsr_charaImg{
+    max-width: var(--width--tool_hsr);
+    max-height: calc(var(--width--tool_hsr) / 16 * 9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    padding: 0;
+}
+
+.tool_hsr_lightCone_img_div{
+    width: var(--width--tool_hsr);
+    height: calc(var(--width--tool_hsr) / 3 * 2);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.tool_hsr_lightCone_img{
+    max-width: var(--width--tool_hsr);
+    max-height: calc(var(--width--tool_hsr) / 3 * 2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    padding: 0;
+}
+
+.tool_hsr_cell{
+    width: var(--width--tool_hsr);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    border-radius: var(--font-size);
+}
+
+.tool_hsr_cell > *{
+    width: var(--width--tool_hsr);
+    margin: 0;
+    padding: 0;
+    margin: calc(var(--width--tool_hsr) * 0.05) 0;
+}
+
+.tool_hsr_cell div{
+    width: var(--width--tool_hsr);
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_cell p{
+    width: var(--width--tool_hsr);
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_cell h2{
+    width: var(--width--tool_hsr);
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_cell h3{
+    width: var(--width--tool_hsr);
+    margin: calc(var(--font-size)) 0 0 0;
+    padding: 0;
+}
+
+.tool_hsr_cell range{
+    width: calc(var(--width--tool_hsr) / 1.5);
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_cell select{
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(233, 168, 209, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(139, 111, 201, 0.18),
+            transparent 30%
+        ),
+        var(--color-bg);
+    border: var(--border) solid var(--color-main-dark);
+    width: calc(var(--width--tool_hsr) / 1.5);
+    margin: 0;
+    padding: 0;
+}
+
+.tool_hsr_cell option{
+    text-align: center;
+}
+
+.tool_hsr_sta_none{
+    display: none;
+}
+
+.tool_hsr_sta_block{
+    display: block;
+}
